@@ -1,17 +1,24 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import Home from './Home';
-import Acerca from './Acerca';
-import Contacto from './Contacto';
-import Derechos from './Derechos';
-import Metodos from './Metodos';
-import Videos from './Videos';
-import Reproductor from './Reproductor';
+import {withRkTheme} from 'react-native-ui-kitten';
+import {bootstrap} from './config/bootstrap';
+
+import Home from './components/Home/Home';
+import Acerca from './components/Acerca/Acerca';
+import Contacto from './components/Contacto/Contacto';
+import Derechos from './components/Derechos/Derechos';
+import Metodos from './components/Metodos/Metodos';
+import MetodosDetalle from './components/MetodosDetalle/MetodosDetalle';
+import Videos from './components/Videos/Videos';
+import Reproductor from './components/Reproductor/Reproductor';
+
+bootstrap();
 
 const App = StackNavigator({
   Home: { screen: Home },
   Metodos: { screen: Metodos },
+  MetodosDetalle: { screen: MetodosDetalle },
   Derechos: { screen: Derechos },
   Videos: { screen: Videos },
   Contacto: { screen: Contacto },

@@ -37,7 +37,7 @@ export default class Videos extends React.Component {
         delayPressIn={70}
         activeOpacity={0.8}
         onPress={() => this.props.navigation.navigate('Reproductor')}>
-        <RkCard rkType='backImg'>
+        <RkCard rkType='shadowed'>
           <Image rkCardImg source={row.imagen}/>
           <View rkCardImgOverlay rkCardContent style={styles.overlay}>
             <RkText rkType='nombre'>{row.titulo}</RkText>
@@ -63,17 +63,17 @@ let videos = [
   {
     id: 1,
     titulo: 'Condón Masculino',
-    imagen: require('./assets/image/condonmasculino.jpg'),
+    imagen: require('./assets/condonmasculino.jpg'),
   },
   {
     id: 2,
     titulo: 'Píldora Anticonceptiva',
-    imagen: require('./assets/image/pildoraanticonceptiva.jpg'),
+    imagen: require('./assets/pildoraanticonceptiva.jpg'),
   },
   {
     id: 3,
     titulo: 'Condón Femenino',
-    imagen: require('./assets/image/condonfemenino.png'),
+    imagen: require('./assets/condonfemenino.png'),
   },
 ];
 

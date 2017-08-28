@@ -15,6 +15,7 @@ import {
 import { StackNavigator } from 'react-navigation';
 
 export default class Home extends React.Component {
+
   static navigationOptions = {
     title: 'Hazlo Bien Hazlo Seguro',
     headerTintColor: 'white',
@@ -98,7 +99,8 @@ let styles = RkStyleSheet.create(theme => ({
     },
     container: {
       flexDirection: 'row',
-      alignItems: 'center'
+      alignItems: 'center',
+      backgroundColor: theme.colors.screen.base,
     },
     icon: {
       width: 34,
