@@ -35,7 +35,7 @@ export default class Metodos extends React.Component {
         style={styles.item}
         activeOpacity={1}
         onPress={() => {
-          this.props.navigation.navigate('MetodosDetalle')
+          this.props.navigation.navigate('MetodosDetalle', {titulo: row.title})
         }}>
         <View style={styles.container}>
           <RkText>{row.title}</RkText>

@@ -30,13 +30,13 @@ export default class Videos extends React.Component {
   _keyExtractor(post, index) {
     return post.id;
   }
-//onPress={() => this.props.navigation.navigate('Article', {id: info.item.id})}>
+
   _renderRow(row) {
     return (
       <TouchableOpacity
         delayPressIn={70}
         activeOpacity={0.8}
-        onPress={() => this.props.navigation.navigate('Reproductor')}>
+        onPress={() => this.props.navigation.navigate('Reproductor', {titulo: row.titulo, video: row.video})}>
         <RkCard rkType='shadowed'>
           <Image rkCardImg source={row.imagen}/>
           <View rkCardImgOverlay rkCardContent style={styles.overlay}>
@@ -63,17 +63,20 @@ let videos = [
   {
     id: 1,
     titulo: 'Condón Masculino',
-    imagen: require('./assets/condonmasculino.jpg'),
+    imagen: require('./assets/condon.jpg'),
+    video: require('./assets/condon.mp4'),
   },
   {
     id: 2,
     titulo: 'Píldora Anticonceptiva',
-    imagen: require('./assets/pildoraanticonceptiva.jpg'),
+    imagen: require('./assets/pildora.jpg'),
+    video: require('./assets/pildora.mp4'),
   },
   {
     id: 3,
     titulo: 'Condón Femenino',
-    imagen: require('./assets/condonfemenino.png'),
+    imagen: require('./assets/condon_femenino.jpg'),
+    video: require('./assets/condon_femenino.mp4'),
   },
 ];
 

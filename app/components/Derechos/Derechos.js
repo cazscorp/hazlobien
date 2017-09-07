@@ -38,63 +38,63 @@ export default class Derechos extends React.Component {
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - Decidir de forma libre sobre mi cuerpo y mi sexualidad
+                Decidir de forma libre sobre mi cuerpo y mi sexualidad
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - El respeto de mi intimidad y mi vida privada
+                El respeto de mi intimidad y mi vida privada
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - Vivir una vida libre de violencia sexual
+                Vivir una vida libre de violencia sexual
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - La libertad reproductiva
+                La libertad reproductiva
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - La igualdad de oportunidades y la equidad
+                La igualdad de oportunidades y la equidad
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - Vivir libre de toda discriminación
+                Vivir libre de toda discriminación
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - La información completa, científica y laica sobre la sexualidad
+                La información completa, científica y laica sobre la sexualidad
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - Los servicios de la salud sexual y reproductiva
+                Los servicios de la salud sexual y reproductiva
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                - La participación en las políticas públicas sobre salud sexual y reproductiva
+                La participación en las políticas públicas sobre salud sexual y reproductiva
                 </RkText>
               </View>
             </View>

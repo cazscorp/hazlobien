@@ -15,7 +15,7 @@ import {
 
 export default class Contacto extends React.Component {
     static navigationOptions = ({ navigation }) => ({
-      title: `Contacto`,
+      title: `Contáctanos`,
       headerTintColor: 'white',
       headerStyle: { backgroundColor: '#2196F3' },// blue
     });
