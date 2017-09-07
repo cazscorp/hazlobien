@@ -37,13 +37,15 @@ export default class Videos extends React.Component {
         delayPressIn={70}
         activeOpacity={0.8}
         onPress={() => this.props.navigation.navigate('Reproductor', {titulo: row.titulo, video: row.video})}>
-        <RkCard rkType='shadowed'>
+        <RkCard rkType='backImg'>
           <Image rkCardImg source={row.imagen}/>
-          <View rkCardImgOverlay rkCardContent style={styles.overlay}>
-            <RkText rkType='nombre'>{row.titulo}</RkText>
-          </View>
         </RkCard>
       </TouchableOpacity>
+      /* //Va dentro de RkCard, rkType: 'shadowed','heroImage','backImg'
+                <View rkCardImgOverlay rkCardContent style={styles.overlay}>
+            <RkText rkType='nombre'>{row.titulo}</RkText>
+          </View>
+      */
     )
   }
 
