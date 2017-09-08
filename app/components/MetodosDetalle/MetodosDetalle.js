@@ -4,64 +4,82 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  Image
+  Image,
+  ListView,
+  FlatList
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
 import {
   RkCard,
   RkText,
   RkStyleSheet
 } from 'react-native-ui-kitten';
+import { StackNavigator } from 'react-navigation';
 
 export default class Contacto extends React.Component {
     static navigationOptions = ({ navigation }) => ({
-      title: navigation.state.params.titulo,
+      title: `Métodos - ${navigation.state.params.data.title}`,
       headerTintColor: 'white',
       headerStyle: { backgroundColor: '#2196F3' },// blue
     });
+    
+    constructor(props) {
+      super(props);
+      let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+      this.data = ds.cloneWithRows(this.props.navigation.state.params.data.contents);
+      this.renderRow = this._renderRow.bind(this);
+    }
 
-    render() {
+    _renderRow(row) {
       return (
-        <ScrollView style={styles.root}>
-          <RkCard rkType='article'>
-            
-            <Image rkCardImg source={require('./assets/condonmasculino.jpg')}/>
-            
-            <View rkCardHeader>
-              <View>
-                <RkText style={styles.title} rkType='header4'>
-                JDF ALDFJLA FJKL
-                </RkText>
-              </View>
-            </View>
-            <View rkCardContent>
-              <View>
-                <RkText rkType='primary3 bigLine'>
-                Hh sjfkj snkdjf nksjfn kjfk hwrgbj aldnvbw jsnf,d
-                </RkText>
-              </View>
-            </View>
-
-            <View rkCardHeader>
-              <View>
-                <RkText style={styles.title} rkType='header4'>
-                LKDJFD LDKFJ
-                </RkText>
-              </View>
-            </View>
-            <View rkCardContent>
-              <View>
-                <RkText rkType='primary3 bigLine'>
-                Akasjd lkajsd lasldk alskdj alskjd
-                </RkText>
-              </View>
-            </View>
-
-          </RkCard>
-        </ScrollView>
+        <RkCard rkType='article'>
+          <View rkCardHeader>
+            <RkText style={styles.title} rkType='header4'>
+            {row.title}
+            </RkText>
+          </View>
+          <FlatList rkCardContent
+            data={row.list}
+            renderItem={({item}) => 
+              <RkText style={styles.list} rkType='primary3 bigLine'>
+                {item.key}
+              </RkText>
+            }
+          />
+        </RkCard>
       )
     }
 
+    render() {
+      const { state } = this.props.navigation;
+      return (
+        <ScrollView style={styles.root}>
+
+          <RkCard rkType='article'>
+            <Image rkCardImg source={require('./assets/condonmasculino.jpg')}/>
+            <View rkCardContent>
+              
+              <FlatList
+                data={state.params.data.desc}
+                renderItem={({item}) => 
+                  <RkText style={styles.list} rkType='primary3 bigLine'>
+                    {item.key}
+                  </RkText>
+                }
+              />
+
+
+            </View>
+          </RkCard>
+
+          <ListView
+            enableEmptySections={true}
+            dataSource={this.data}
+            renderRow={this.renderRow}
+          />
+
+        </ScrollView>
+      )
+    }
 }
 
 let styles = RkStyleSheet.create(theme => ({
@@ -70,5 +88,8 @@ let styles = RkStyleSheet.create(theme => ({
   },
   title: {
     marginBottom: 5
+  },
+  list: {
+    marginBottom: 10
   },
 }));
