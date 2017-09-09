@@ -66,19 +66,19 @@ let videos = [
     id: 1,
     titulo: 'Condón Masculino',
     imagen: require('./assets/condon.jpg'),
-    video: require('./assets/condon.mp4'),
+    video: require('./assets/video_condon.mp4'),
   },
   {
     id: 2,
     titulo: 'Píldora Anticonceptiva',
     imagen: require('./assets/pildora.jpg'),
-    video: require('./assets/pildora.mp4'),
+    video: require('./assets/video_pildora.mp4'),
   },
   {
     id: 3,
     titulo: 'Condón Femenino',
     imagen: require('./assets/condon_femenino.jpg'),
-    video: require('./assets/condon_femenino.mp4'),
+    video: require('./assets/video_condon_femenino.mp4'),
   },
 ];
 
