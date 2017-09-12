@@ -55,7 +55,7 @@ export default class Contacto extends React.Component {
         <ScrollView style={styles.root}>
 
           <RkCard rkType='article'>
-            <Image rkCardImg source={require('./assets/condonmasculino.jpg')}/>
+            <Image rkCardImg source={state.params.data.image}/>
             <View rkCardContent>
               
               <FlatList

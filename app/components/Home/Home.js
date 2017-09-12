@@ -61,26 +61,25 @@ export default class Home extends React.Component {
     return (
       <View style={styles.container}>
 
-
-      <View style={{ flex: 3, display: 'none' }} onLayout={this._onLayoutDidChange}>
-      <Carousel
-        delay={2000}
-        style={this.state.size}
-        autoplay
-        pageInfo
-        currentPage={2}
-        onAnimateNextPage={(p) => console.log(p)}
-      >
-        <View style={[{ backgroundColor: '#BADA55' }, this.state.size]}><Text>1</Text></View>
-        <View style={[{ backgroundColor: 'red' }, this.state.size]}><Text>2</Text></View>
-        <View style={[{ backgroundColor: 'blue' }, this.state.size]}><Text>3</Text></View>
-      </Carousel>
-    </View>
+        <View style={{ flex: 3, display: 'none' }} onLayout={this._onLayoutDidChange}>
+          <Carousel
+            delay={2000}
+            style={this.state.size}
+            autoplay
+            pageInfo
+            currentPage={2}
+            onAnimateNextPage={(p) => console.log(p)}
+          >
+            <View style={[{ backgroundColor: '#BADA55' }, this.state.size]}><Text>1</Text></View>
+            <View style={[{ backgroundColor: 'red' }, this.state.size]}><Text>2</Text></View>
+            <View style={[{ backgroundColor: 'blue' }, this.state.size]}><Text>3</Text></View>
+          </Carousel>
+        </View>
 
         <ListView 
-            style={styles.list}
-            dataSource={this.data}
-            renderRow={this.renderRow}
+          style={styles.list}
+          dataSource={this.data}
+          renderRow={this.renderRow}
         />
       </View>
     );

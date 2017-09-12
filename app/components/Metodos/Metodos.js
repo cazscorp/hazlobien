@@ -71,6 +71,7 @@ const routes = [
     id: 1,
     data: {
       title: 'Condón Masculino',
+      image: require('./assets/condon.jpg'),
       desc: [
         {key: 'Un Condón es una delgada funda de látex o poliuretano que se coloca sobre el pene erecto del hombre antes de tener sexo.',},
       ],
@@ -100,6 +101,7 @@ const routes = [
     id: 2,
     data: {
       title: 'Pastillas Anticonceptivas',
+      image: require('./assets/pildora.jpg'),
       desc: [
         {key: 'Los anticonceptivos hormonales orales o pastillas anticonceptivas, son un método seguro y efectivo para evitar temporalmente el embarazo, contienen pequeñas cantidades de hormonas femeninas parecidas a las que produce el organismo de la mujer.'},
         {key: 'Los anticonceptivos hormonales orales, contienen 21 pastillas anticonceptivas, que se toman diariamente a la misma hora.'},
@@ -113,6 +115,7 @@ const routes = [
     id: 3,
     data: {
       title: 'Hormonal Inyectable',
+      image: require('./assets/inyectable.jpg'),
       desc: [
         {key: 'Hay dos presentaciones de hormonales inyectables que se usan como anticonceptivos: la de aplicación mensual y la trimestral.'},
         {key: 'La mensual contiene hormonales combinados (estrógeno y progesterona), mientras que la trimestral contiene sólo progestina.'},
@@ -125,6 +128,7 @@ const routes = [
     id: 4,
     data: {
       title: 'Implante Hormonal Subdérmico',
+      image: require('./assets/subdermico.jpg'),
       desc: [
         {key: 'Es una varilla flexible que contiene una hormona derivada de la progesterona, que evita la ovulación y hace más espeso el moco del cuello útero, impidiendo el paso de los espermatozoides al interior del útero.'},
         {key: ' Debe ser colocada por personal capacitado, su eectividad es de 99.5% y no proteje de enfermedades de transmisión sexual.'},
@@ -137,6 +141,7 @@ const routes = [
     id: 5,
     data: {
       title: 'Parche Anticonceptivo',
+      image: require('./assets/parche.jpg'),
       desc: [
         {key: 'Es un parche de plástico delgado, cuadrado, el cual se pega a la piel y libera hormonas similares a las que produce la mujer, inhibiendola ovulación y haciendo más espeso el moco del cuello del útero.'},
         {key: 'Uso: Deja el parche en su sitio durante una semana y luego reemplázalo con uno nuevo. Ponte un nuevo parche y quita el anterior una vez por semana durante 3 semanas, (siempre debe ser colocado el mismo día de la semana, por ejemplo: si te lo colocaste un lunes, la próxima semana también tendrá que ser colocado el lunes) 21 días en total.'},
@@ -150,6 +155,7 @@ const routes = [
     id: 6,
     data: {
       title: 'Píldora del Día Después',
+      image: require('./assets/postday.jpg'),
       desc: [
         {key: 'La pastilla Postday es un método anticonceptivo de emergencia. No protege contra las enfermedades de transmisión sexual pero impide la implantación del óvulo fecundado, evitando así el embarazo.'},
         {key: 'Para que sea eficaz, debe tomarse antes de que hayan transcurrido 72 horas desde la relación sexual. Y es más eficaz si se toma antes de las 24 horas.'},

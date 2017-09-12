@@ -65,20 +65,44 @@ let videos = [
   {
     id: 1,
     titulo: 'Condón Masculino',
-    imagen: require('./assets/condon.jpg'),
-    video: require('./assets/video_condon.mp4'),
+    imagen: require('./assets/image/condon.jpg'),
+    video: require('./assets/video/condon.mp4'),
   },
   {
     id: 2,
     titulo: 'Píldora Anticonceptiva',
-    imagen: require('./assets/pildora.jpg'),
-    video: require('./assets/video_pildora.mp4'),
+    imagen: require('./assets/image/pildora.jpg'),
+    video: require('./assets/video/pildora.mp4'),
   },
   {
     id: 3,
     titulo: 'Condón Femenino',
-    imagen: require('./assets/condon_femenino.jpg'),
-    video: require('./assets/video_condon_femenino.mp4'),
+    imagen: require('./assets/image/condon_femenino.jpg'),
+    video: require('./assets/video/condon_femenino.mp4'),
+  },
+  {
+    id: 4,
+    titulo: 'Anticonceptivos Hormonales Inyectables',
+    imagen: require('./assets/image/inyectable.jpg'),
+    video: require('./assets/video/inyectable.mp4'),
+  },
+  {
+    id: 5,
+    titulo: 'Implante Anticonceptivo',
+    imagen: require('./assets/image/implante.jpg'),
+    video: require('./assets/video/implante.mp4'),
+  },
+  {
+    id: 6,
+    titulo: 'Parche Anticonceptivo',
+    imagen: require('./assets/image/parche.jpg'),
+    video: require('./assets/video/parche.mp4'),
+  },
+  {
+    id: 7,
+    titulo: 'Píldora del Día Siguiente',
+    imagen: require('./assets/image/postday.jpg'),
+    video: require('./assets/video/postday.mp4'),
   },
 ];
 

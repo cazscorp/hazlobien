@@ -27,74 +27,101 @@ export default class Derechos extends React.Component {
             
             <Image rkCardImg source={require('./assets/derechos.jpg')}/>
             
-          <View rkCardHeader>
-            <View>
-              <RkText style={styles.title} rkType='header4'>
-              DERECHO A
-              </RkText>
-            </View>
-          </View>
-
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Decidir de forma libre sobre mi cuerpo y mi sexualidad
+                •	Derecho a decidir de forma libre, autónoma e informada sobre nuestro cuerpo y nuestra sexualidad
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                El respeto de mi intimidad y mi vida privada
+                •	Derecho a ejercer y disfrutar plenamente nuestra sexualidad
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Vivir una vida libre de violencia sexual
+                •	Derecho a manifestar públicamente nuestros afectos
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                La libertad reproductiva
+                •	Derecho a decidir libremente con quién o quiénes relacionarnos afectiva, erótica y socialmente
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                La igualdad de oportunidades y la equidad
+                •	Derecho a que se respete nuestra privacidad e intimidad y a que se resguarde confidencialmente nuestra información personal
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Vivir libre de toda discriminación
+                •	Derecho a la vida, a la integridad física, psicológica y sexual, a vivir libres de violencia
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                La información completa, científica y laica sobre la sexualidad
+                •	Derecho a decidir de manera libre e informada sobre nuestra vida reproductiva
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Los servicios de la salud sexual y reproductiva
+                •	Derecho a la igualdad, a vivir libres de prejuicios y estereotipos de género
                 </RkText>
               </View>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                La participación en las políticas públicas sobre salud sexual y reproductiva
+                •	Derecho a vivir libres de discriminación
+                </RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <View>
+                <RkText rkType='primary3 bigLine'>
+                •	Derecho a la información actualizada, veraz, completa, científica y laica sobre sexualidad
+                </RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <View>
+                <RkText rkType='primary3 bigLine'>
+                •	Derecho a la educación integral en sexualidad
+                </RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <View>
+                <RkText rkType='primary3 bigLine'>
+                •	Derecho a los servicios de salud sexual y reproductiva
+                </RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <View>
+                <RkText rkType='primary3 bigLine'>
+                •	Derecho a la identidad sexual, a construir, decidir y expresar nuestra identidad de género
+                </RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <View>
+                <RkText rkType='primary3 bigLine'>
+                •	Derecho a la participación en las políticas públicas sobre sexualidad y reproducción
                 </RkText>
               </View>
             </View>
@@ -108,7 +135,7 @@ export default class Derechos extends React.Component {
               </View>
             </View>
             <View rkCardContent>
-              <View>
+              <View style={styles.end}>
                 <RkText rkType='primary3 bigLine'>
                 En la medida que conozcas tus derechos sexuales y reproductivos, 
                 podrás defenderlos y serás parte activa de tu proceso de autonomía, 
@@ -130,5 +157,8 @@ let styles = RkStyleSheet.create(theme => ({
   },
   title: {
     marginBottom: 5
+  },
+  end: {
+    marginBottom: 50
   },
 }));
