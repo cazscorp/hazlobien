@@ -37,29 +37,53 @@ export default class Contacto extends React.Component {
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Módulo de servicios amigables centro de salud úrbano de Taxco.
+                Módulo de Servicios Amigables
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
+                Centro de Salud Urbano de Taxco
+                </RkText>
+                <RkText rkType='primary3 bigLine' style={styles.br}>
                 Avenida de los plateros #4280  
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
                 +52 733 141 35 96
+                </RkText>
+                <RkText rkType='primary3 bigLine' style={styles.br}>
                 vaaryknia@gmail.com
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
                 Facebook:
-                https://www.facebook.com/modulodeadolescentes.csut
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
+                modulodeadolescentes.csut
                 </RkText>
               </View>
             </View>
 
             <View rkCardHeader>
-              <View>
-                <RkText style={styles.title} rkType='header4'>
-                Otros Datos
-                </RkText>
-              </View>
+              <RkText style={styles.title} rkType='header4'>
+              Otros Datos
+              </RkText>
             </View>
             <View rkCardContent>
               <View>
                 <RkText rkType='primary3 bigLine'>
-                Nombre: Módulo de Servicios Amigables para Adolescentes
-                Dirección: Av. De Los Plateros Frente Al IMSS, Centro De Salud Urbano De Taxco, Guerrero, México.
-                Sitio Web: http://hazlo-seguro-hazlo-bien.webnode.es
+                Nombre:
+                </RkText>
+                <RkText rkType='primary3 bigLine' style={styles.br}>
+                Módulo de Servicios Amigables para Adolescentes
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
+                Dirección:
+                </RkText>
+                <RkText rkType='primary3 bigLine' style={styles.br}>
+                Av. De Los Plateros Frente Al IMSS, Centro De Salud Urbano De Taxco, Guerrero, México.
+                </RkText>
+                <RkText rkType='primary3 bigLine'>
+                Sitio Web:
+                </RkText>
+                <RkText rkType='primary3 bigLine' style={styles.br}>
+                http://hazlo-seguro-hazlo-bien.webnode.es
                 </RkText>
               </View>
             </View>
@@ -77,5 +101,8 @@ let styles = RkStyleSheet.create(theme => ({
   },
   title: {
     marginBottom: 5
+  },
+  br: {
+    marginBottom: 10
   },
 }));
