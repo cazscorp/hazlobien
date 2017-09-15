@@ -6,13 +6,16 @@ import {
   StyleSheet,
   ListView,
   TouchableHighlight,
-  Dimensions
+  ScrollView,
+  Dimensions,
+  Image
 } from 'react-native';
 import {
-    RkText,
-    RkStyleSheet,
-    RkTheme
-  } from 'react-native-ui-kitten';
+  RkCard,
+  RkText,
+  RkStyleSheet,
+  RkTheme
+} from 'react-native-ui-kitten';
 import { StackNavigator } from 'react-navigation';
 import Carousel from 'react-native-looped-carousel';
 
@@ -59,29 +62,37 @@ export default class Home extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.root}>
+      
+        <RkCard rkType='article'>
+          <View rkCardContent>
+            <View onLayout={this._onLayoutDidChange}>
+              <Carousel
+                rkCardImg
+                delay={2200}
+                bullets={true}
+                autoplay
+                currentPage={0}
+                //onAnimateNextPage={(p) => console.log(p)}
+              >
+                <Image rkCardImg source={require('../Acerca/assets/dibujo.jpg')}/>
+                <Image rkCardImg source={require('../Acerca/assets/team2.jpg')}/>
+                <Image rkCardImg source={require('../Acerca/assets/team.jpg')}/>
+                <Image rkCardImg source={require('../Acerca/assets/team4.jpg')}/>
+              </Carousel>
+            </View>
+          </View>
+        </RkCard>
 
-        <View style={{ flex: 3, display: 'none' }} onLayout={this._onLayoutDidChange}>
-          <Carousel
-            delay={2000}
-            style={this.state.size}
-            autoplay
-            pageInfo
-            currentPage={2}
-            onAnimateNextPage={(p) => console.log(p)}
-          >
-            <View style={[{ backgroundColor: '#BADA55' }, this.state.size]}><Text>1</Text></View>
-            <View style={[{ backgroundColor: 'red' }, this.state.size]}><Text>2</Text></View>
-            <View style={[{ backgroundColor: 'blue' }, this.state.size]}><Text>3</Text></View>
-          </Carousel>
+        <View style={styles.container}>
+          <ListView 
+            style={styles.list}
+            dataSource={this.data}
+            renderRow={this.renderRow}
+          />
         </View>
 
-        <ListView 
-          style={styles.list}
-          dataSource={this.data}
-          renderRow={this.renderRow}
-        />
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -90,7 +101,7 @@ const routes = [
   {
     id: 1,
     nav: 'Metodos',
-    title: 'Métodos Anticonceptivos',
+    title: 'Métodos anticonceptivos',
   },
   {
     id: 2,
@@ -115,24 +126,32 @@ const routes = [
 ];
 
 let styles = RkStyleSheet.create(theme => ({
-    item: {
-      height: 80,
-      justifyContent: 'center',
-      borderBottomWidth: StyleSheet.hairlineWidth,
-      borderColor: theme.colors.border.base,
-      paddingHorizontal: 16
-    },
-    list: {
-      backgroundColor: theme.colors.screen.base,
-    },
-    container: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: theme.colors.screen.base,
-    },
-    icon: {
-      width: 34,
-      textAlign: 'center',
-      marginRight: 16
-    }
-  }));
+  root: {
+    backgroundColor: theme.colors.screen.base,
+    flexDirection: 'column',
+  },
+  item: {
+    height: 80,
+    justifyContent: 'center',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: theme.colors.border.base,
+    paddingHorizontal: 16
+  },
+  list: {
+    backgroundColor: theme.colors.screen.base,
+  },
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: theme.colors.screen.base,
+  },
+  icon: {
+    width: 34,
+    textAlign: 'center',
+    marginRight: 16
+  },
+  nono: {
+    padding: 0,
+    margin: 0
+  },
+}));

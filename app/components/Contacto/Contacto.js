@@ -28,64 +28,51 @@ export default class Contacto extends React.Component {
             <Image rkCardImg source={require('./assets/contacto.png')}/>
             
             <View rkCardHeader>
-              <View>
-                <RkText style={styles.title} rkType='header4'>
-                Datos de Contacto
-                </RkText>
-              </View>
+              <RkText rkType='header4'>
+              MÓDULO DE SERVICIOS AMIGABLES
+              </RkText>
             </View>
+
             <View rkCardContent>
-              <View>
-                <RkText rkType='primary3 bigLine'>
-                Módulo de Servicios Amigables
-                </RkText>
+
+              <View style={{flexDirection: 'row'}}>
+                <Image style={{width:30, height:30, marginRight: 10}} source={require('./assets/ubicacion.jpg')} />
                 <RkText rkType='primary3 bigLine'>
                 Centro de Salud Urbano de Taxco
                 </RkText>
-                <RkText rkType='primary3 bigLine' style={styles.br}>
-                Avenida de los plateros #4280  
-                </RkText>
+              </View>
+              <RkText rkType='primary3 bigLine' style={styles.tab}>
+              Avenida de los plateros #4280  
+              </RkText>
+
+              <View style={{flexDirection: 'row', marginTop: 10}}>
+                <Image style={{width:30, height:30, marginRight: 10}} source={require('./assets/tel.jpg')} />
                 <RkText rkType='primary3 bigLine'>
                 +52 733 141 35 96
                 </RkText>
-                <RkText rkType='primary3 bigLine' style={styles.br}>
+              </View>
+
+              <View style={{flexDirection: 'row', marginTop: 15}}>
+                <Image style={{width:30, height:30, marginRight: 10}} source={require('./assets/email.jpg')} />
+                <RkText rkType='primary3 bigLine'>
                 vaaryknia@gmail.com
                 </RkText>
-                <RkText rkType='primary3 bigLine'>
-                Facebook:
-                </RkText>
-                <RkText rkType='primary3 bigLine'>
-                modulodeadolescentes.csut
-                </RkText>
               </View>
-            </View>
 
-            <View rkCardHeader>
-              <RkText style={styles.title} rkType='header4'>
-              Otros Datos
-              </RkText>
-            </View>
-            <View rkCardContent>
-              <View>
+              <View style={{flexDirection: 'row', marginTop: 15}}>
+                <Image style={{width:30, height:30, marginRight: 10}} source={require('./assets/fb.png')} />
                 <RkText rkType='primary3 bigLine'>
-                Nombre:
-                </RkText>
-                <RkText rkType='primary3 bigLine' style={styles.br}>
-                Módulo de Servicios Amigables para Adolescentes
-                </RkText>
-                <RkText rkType='primary3 bigLine'>
-                Dirección:
-                </RkText>
-                <RkText rkType='primary3 bigLine' style={styles.br}>
-                Av. De Los Plateros Frente Al IMSS, Centro De Salud Urbano De Taxco, Guerrero, México.
-                </RkText>
-                <RkText rkType='primary3 bigLine'>
-                Sitio Web:
-                </RkText>
-                <RkText rkType='primary3 bigLine' style={styles.br}>
-                http://hazlo-seguro-hazlo-bien.webnode.es
+                Módulo De Adolescentes CSUT
                 </RkText>
               </View>
+              
+              <View style={{flexDirection: 'row', marginTop: 15}}>
+                <Image style={{width:30, height:30, marginRight: 10}} source={require('./assets/web.jpg')} />
+                <RkText rkType='primary3 bigLine'>
+                hazlo-seguro-hazlo-bien.webnode.es
+                </RkText>
+              </View>
+
             </View>
 
           </RkCard>
@@ -99,10 +86,11 @@ let styles = RkStyleSheet.create(theme => ({
   root: {
     backgroundColor: theme.colors.screen.base
   },
-  title: {
-    marginBottom: 5
-  },
   br: {
     marginBottom: 10
+  },
+  tab: {
+    marginBottom: 10,
+    paddingLeft: 40,
   },
 }));

@@ -52,9 +52,16 @@ export default class Metodos extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <ScrollView style={styles.root}>
+
         <RkCard rkType='article'>
           <Image rkCardImg source={require('./assets/metodos.jpg')}/>
+          <View rkCardContent>
+            <RkText rkType='primary3 bigLine'>
+            Métodos anticonceptivos disponibles para ti, totalmente gratis. Selecciona uno para más información:
+            </RkText>
+          </View>
         </RkCard>
+
         <ListView 
             style={styles.list}
             dataSource={this.data}
@@ -73,25 +80,16 @@ const routes = [
       title: 'Condón Masculino',
       image: require('./assets/condon.jpg'),
       desc: [
-        {key: 'Un Condón es una delgada funda de látex o poliuretano que se coloca sobre el pene erecto del hombre antes de tener sexo.',},
+        {key: 'El condón es una forma simple y barata de prevenir embarazos no planeados y ETS. Actúa capturando los espermatozoides a medida que éstos se liberan e impidie que entren a la vagina.',},
       ],
       contents: [
         {
-          title: 'BENEFICIOS',
+          title: '¿Cómo se utiliza?',
           list: [
-            {key: '- Protege contra ETS'},
-            {key: '- Bajo costo'},
-            {key: '- Fácil de usar'},
-          ],
-        },
-        {
-          title: 'CÓMO SE UTILIZA',
-          list: [
-            {key: '1. Verificar la fecha de caducidad'},
-            {key: '2. Abrir con las yemas de los dedos por la parte dentada, sin utilizar uñas ni dientes, ni ningún otro objeto'},
-            {key: '3. Sacar cuidadosamente con las manos limpias, verificar que esté del lado correcto, presionar la punta para evitar el paso del aire y evitar que se rompa'},
-            {key: '4. Con la punta aún sujeta, colocarlo en el pene erecto hasta la base'},
-            {key: '5. Después del acto, retirarlo con un trozo de papel o servilleta SIN TOCARLOS y tirarlo en un contenedor de basura'},
+            {key: 'Usar el condón es fácil, solo desenrolla el condón sobre el pene erecto justo antes del sexo y ya está.'},
+            {key: 'Una vez que hayas terminado y el condón haya cumplido con su función, quítalo antes de que el pene se ablande.'},
+            {key: 'Se debe sujetar contra la base del pene tan pronto como haya ocurrido la eyaculación para asegurarse de que no se deslice y para prevenir que el semen se escape al retirar el pene.'},
+            {key: 'Úsalo una vez y después tíralo.'},
           ],
         },
       ]
@@ -100,83 +98,136 @@ const routes = [
   {
     id: 2,
     data: {
-      title: 'Pastillas Anticonceptivas',
+      title: 'Método Hormonal',
       image: require('./assets/pildora.jpg'),
       desc: [
-        {key: 'Los anticonceptivos hormonales orales o pastillas anticonceptivas, son un método seguro y efectivo para evitar temporalmente el embarazo, contienen pequeñas cantidades de hormonas femeninas parecidas a las que produce el organismo de la mujer.'},
-        {key: 'Los anticonceptivos hormonales orales, contienen 21 pastillas anticonceptivas, que se toman diariamente a la misma hora.'},
-        {key: 'La primera pastilla se toma el primer día de la menstruación, al terminar de tomar las pastillas del paquete, se deja un periodo de 7 días sin tomar pastillas, durante los cuales se presenta la menstruación.'},
-        {key: 'Recuerda iniciar la toma de pastillas de un paquete nuevo al siguiente día de los 7 días de descanso.'},
+        {key: 'La píldora es una pequeña tableta que contiene hormonas y que las mujeres deben tomar todos los días a la misma.'},
       ],
-      contents: []
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Debes tomar la píldora todos los días a la misma hora, tanto si tienes sexo como si no.'},
+            {key: 'Si olvidas tomar la píldora, ésta no será tan efectiva como debería y podrías embarazarte.'},
+          ],
+        },
+      ]
     }
   },
   {
     id: 3,
     data: {
-      title: 'Hormonal Inyectable',
+      title: 'Inyección',
       image: require('./assets/inyectable.jpg'),
       desc: [
-        {key: 'Hay dos presentaciones de hormonales inyectables que se usan como anticonceptivos: la de aplicación mensual y la trimestral.'},
-        {key: 'La mensual contiene hormonales combinados (estrógeno y progesterona), mientras que la trimestral contiene sólo progestina.'},
-        {key: 'Las inyecciones anticonceptivas que contienen hormonales combinados pueden ser usadas por toda mujer sana que desea evitar o espaciar sus embarazos, y que haya recibido consejería previamente.'},
+        {key: 'La inyección anticonceptiva es una inyección de hormonas que se aplica en el músculo o debajo de la piel.'},
       ],
-      contents: []
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Dependiendo del tipo de inyección que elijas, solo necesitarás regresar cada mes o cada dos meses para recibir otra inyección y entre una y otra estarás altamente protegida.'},
+          ],
+        },
+      ]
     }
   },
   {
     id: 4,
     data: {
-      title: 'Implante Hormonal Subdérmico',
+      title: 'Implante',
       image: require('./assets/subdermico.jpg'),
       desc: [
-        {key: 'Es una varilla flexible que contiene una hormona derivada de la progesterona, que evita la ovulación y hace más espeso el moco del cuello útero, impidiendo el paso de los espermatozoides al interior del útero.'},
-        {key: ' Debe ser colocada por personal capacitado, su eectividad es de 99.5% y no proteje de enfermedades de transmisión sexual.'},
-        {key: 'Tiene una duración de 3 años. Puede causar alteraciones en el ciclo menstrual después de retirarlo (al igual que todos los métodos hormonales).'},
+        {key: 'Un pequeño bastón de silicona liberadores de hormona que un profesional médico coloca bajo la piel.'},
       ],
-      contents: []
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Después de haber recibido asesoría de tu profesional médico, que el implante anticonceptivo es el método para ti, tu profesional médico se asegurará de que no estás embarazada y de que se te puede colocar el implante.'},
+            {key: 'Después de poner anestesia local, un profesional médico capacitado adormecerá una pequeña área de la parte superior interna de tu brazo y colocará el implante.'},
+          ],
+        },
+      ]
     }
   },
   {
     id: 5,
     data: {
-      title: 'Parche Anticonceptivo',
+      title: 'Método del Parche',
       image: require('./assets/parche.jpg'),
       desc: [
-        {key: 'Es un parche de plástico delgado, cuadrado, el cual se pega a la piel y libera hormonas similares a las que produce la mujer, inhibiendola ovulación y haciendo más espeso el moco del cuello del útero.'},
-        {key: 'Uso: Deja el parche en su sitio durante una semana y luego reemplázalo con uno nuevo. Ponte un nuevo parche y quita el anterior una vez por semana durante 3 semanas, (siempre debe ser colocado el mismo día de la semana, por ejemplo: si te lo colocaste un lunes, la próxima semana también tendrá que ser colocado el lunes) 21 días en total.'},
-        {key: 'Cada cuarta semana te quedas sin parche. Se debe ir alternando el lugar donde se coloca. Tu periodo menstrual empezará durante esta semana sin parche. Después repite nuevamente el mismo proceso.'},
-        {key: 'Si el parche se afloja o se desprende, revusa el Folleto de Información para el Paciente que se incluye en el empaque del parche. En caso de duda puedes acudir a los servicios amigables del centro de salud para pedir información.'},
+        {key: 'Parche que se adhiere a la piel y libera hormonas que son altamente efectivas para prevenir el embarazo.'},
       ],
-      contents: []
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Desprende la parte posterior y aplica el parche directamente sobre tu piel en la parte baja del abdomen, las nalgas, la parte superior del brazo o la espalda.'},
+            {key: 'Deja el parche en su sitio durante una semana y luego reemplázalo con uno nuevo.'},
+            {key: 'Ponte un nuevo parche y quita el anterior una vez por semana durante 3 semanas, 21 días en total.'},
+            {key: 'Cada 4ª semana te quedas sin parche. Tu período menstrual empezará durante esta semana.'},
+          ],
+        },
+      ]
     }
   },
   {
     id: 6,
     data: {
-      title: 'Píldora del Día Después',
+      title: 'Pastilla de Emergencia',
       image: require('./assets/postday.jpg'),
       desc: [
-        {key: 'La pastilla Postday es un método anticonceptivo de emergencia. No protege contra las enfermedades de transmisión sexual pero impide la implantación del óvulo fecundado, evitando así el embarazo.'},
-        {key: 'Para que sea eficaz, debe tomarse antes de que hayan transcurrido 72 horas desde la relación sexual. Y es más eficaz si se toma antes de las 24 horas.'},
-        {key: 'Libera una gran cantidad de hormonas, por lo que es recomendable que se consuma como máximo dos veces por año.'},
+        {key: 'Los anticonceptivos de emergencia se usan en caso de sexo accidental sin protección.'},
       ],
-      contents: []
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Se toma solo en caso de emergencia, cuando el condón se rompió, se tuvo relaciones sin protección, etc.'},
+            {key: 'Se tiene un máximo de 72 horas una vez pasada la relación sexual y no se debe tomar más de dos veces por año.'},
+          ],
+        },
+      ]
     }
   }, 
-  /*
   {
     id: 7,
-    title: '',
-  },
-  {
-    id: 8,
-    title: '',
-  },
-  {
-    id: 9,
-    title: '',
-  },*/
+    data: {
+      title: 'Método Intrauterino',
+      image: require('./assets/diu.jpg'),
+      desc: [
+        {key: 'Un DIU es un pequeño sistema que libera pequeñas cantidades de hormonas y que se coloca dentro de la matriz.'},
+      ],
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: 'Para usar el DIU, en realidad no hay nada más que hacer que consultar a tu profesional médico para asegurarte de si es el método adecuado para ti.'},
+            {key: 'Una vez que el DIU ha sido colocado por un profesional médico capacitado, te encontrarás altamente protegida de un embarazo hasta por 3 o 5 años.'},
+          ],
+        },
+      ]
+    }
+  }, 
+  /*{
+    id: ,
+    data: {
+      title: '',
+      image: require('./assets/.jpg'),
+      desc: [
+        {key: ''},
+      ],
+      contents: [
+        {
+          title: '¿Cómo se utiliza?',
+          list: [
+            {key: ''},
+          ],
+        },
+      ]
+    }
+  }, */
 ];
 
 let styles = RkStyleSheet.create(theme => ({
